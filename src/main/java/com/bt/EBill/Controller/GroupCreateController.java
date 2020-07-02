@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bt.EBill.Model.GroupModel;
 import com.bt.EBill.Service.GroupCreateService;
 
 @RestController
@@ -16,7 +17,7 @@ public class GroupCreateController {
 	private GroupCreateService groupCreateService;
 
 	@GetMapping("/grp")
-	public List<Object[]> getMapping() {
+	public List<GroupModel> getMapping() {
 		return groupCreateService.getMapping();
 	}
 }
