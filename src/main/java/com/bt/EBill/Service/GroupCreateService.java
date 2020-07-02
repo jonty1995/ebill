@@ -16,8 +16,8 @@ public class GroupCreateService {
 
 	@Autowired
 	private GroupCreateRepoImpl groupCreateRepoImpl;
-	@Autowired
-	private GroupModel groupModel;
+	
+	private GroupModel groupModel=new GroupModel();
 
 	public List<GroupModel> getMapping() {
 		List<GroupModel> lst = new ArrayList<GroupModel>();

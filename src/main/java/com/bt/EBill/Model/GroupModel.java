@@ -9,7 +9,6 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class GroupModel {
 	private String group_id,group_description,start_date, end_date;
 }
