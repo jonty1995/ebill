@@ -17,15 +17,16 @@ public class GroupCreateService {
 	@Autowired
 	private GroupCreateRepoImpl groupCreateRepoImpl;
 	
-	private GroupModel groupModel=new GroupModel();
 
 	public List<GroupModel> getMapping() {
 		List<GroupModel> lst = new ArrayList<GroupModel>();
 		for (Object[] row : groupCreateRepoImpl.getMappings()) {
+			GroupModel groupModel=new GroupModel();
 			groupModel.setGroup_id(row[0].toString());
 			groupModel.setGroup_description(row[1].toString());
 			groupModel.setStart_date(GenericFunction.convertToUIDateV1(row[2]));
 			groupModel.setEnd_date(GenericFunction.convertToUIDateV1(row[3]));
+			lst.add(groupModel);
 		}
 		return lst;
 	}
